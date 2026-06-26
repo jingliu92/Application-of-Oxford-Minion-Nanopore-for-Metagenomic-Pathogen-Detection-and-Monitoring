@@ -33,6 +33,22 @@ Specific objectives include:
 
 <img width="1536" height="1024" alt="image" src="https://github.com/user-attachments/assets/ac8e92b2-292d-411a-8e42-16bd38cece76" />
 
-## 3. Bioinformatics Pipeline: 
+## 3. Oxford ONT MinION 
+### Device and Kits
+
+| Item                                                            | Purpose                                                                                                                                                                                                                                        |      Needed for Your Project?     |
+| --------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :-------------------------------: |
+| **MinION Mk1D**                                                 | The sequencing device that connects to your computer and performs real-time nanopore sequencing.                                                                                                                                               |            ✅ Essential            |
+| **R10.4.1 DNA Flow Cells (FLO-MIN114)**                         | The consumable chip containing thousands of nanopores. DNA molecules pass through these pores to generate sequencing data. One flow cell is typically used per sequencing run (although it can sometimes be washed and reused).                |            ✅ Essential            |
+| **Ligation Sequencing Kit V14 (SQK-LSK114)**                    | Library preparation kit. It repairs DNA ends, adds sequencing adapters and motor proteins so DNA can enter the nanopores. This is the recommended kit for **shotgun metagenomics** because it produces the highest yield and longest reads.    |            ✅ Essential            |
+| **Native Barcoding Kit 24 (SQK-NBD114.24)** *(optional add-on)* | Adds unique DNA barcodes to each sample, allowing multiple samples (e.g., 2–24) to be pooled and sequenced on the same flow cell. After sequencing, the software separates the reads by barcode (demultiplexing).                              |           ✅ Recommended           |
+| **Flow Cell Wash Kit**                                          | Cleans residual DNA from a used flow cell so it can potentially be reused for another run if sufficient nanopores remain active. This helps reduce consumable costs.                                                                           |              ✅ Useful             |
+| **Control Expansion Kit**                                       | Contains a control DNA sample (typically lambda phage DNA) used to verify that the sequencing chemistry, flow cell, and instrument are functioning properly during initial setup or troubleshooting. It is **not** used for your food samples. | ⚪ Optional (included in the pack) |
+
+
+
+
+
+## 4. Bioinformatics Pipeline: 
 
 We here propose to adapt the published IDseq (CZ ID) metagenomic pathogen detection workflow for Oxford Nanopore long-read sequencing. While the original IDseq platform was primarily developed for Illumina-based metagenomic datasets, our pipeline will incorporate Oxford Nanopore-specific preprocessing (Dorado basecalling, NanoFilt quality filtering, and long-read genome assembly) while retaining the robust taxonomic classification and pathogen identification framework established by IDseq. Additional modules for antimicrobial resistance gene detection, virulence profiling, and automated reporting will be integrated to support routine food safety surveillance.
