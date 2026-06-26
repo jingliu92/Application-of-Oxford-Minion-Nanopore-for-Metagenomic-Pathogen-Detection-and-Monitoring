@@ -146,30 +146,22 @@ Reads mapping to the host genome are removed to enrich microbial sequences.
 
 We use a two-step strategy:
 
-**Primary Classification**
+**Primary Classification** Rapid identification of microorganisms.
 
-Rapid identification of microorganisms.
+**Software**: Kraken2
 
-Software: Kraken2
-
-Output
+**Output**
 - Species
 - Genus
 - Relative abundance
 
-↓
+**Secondary Validation** Long-read-aware taxonomic confirmation.
 
-Secondary Validation
+**Software**: MetaMaps
 
-Long-read-aware taxonomic confirmation.
-
-Software
-
-MetaMaps
-
-Output
-
-Species confirmation
-Improved strain-level resolution
+**Output**
+- Species confirmation
+- Improved strain-level resolution
 
 This combination provides both speed and accuracy for Nanopore data.
+
