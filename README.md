@@ -45,7 +45,7 @@ Specific objectives include:
 | **Flow Cell Wash Kit**                                          | Cleans residual DNA from a used flow cell so it can potentially be reused for another run if sufficient nanopores remain active. This helps reduce consumable costs.                                                                           |              ✅ Useful             |
 | **Control Expansion Kit**                                       | Contains a control DNA sample (typically lambda phage DNA) used to verify that the sequencing chemistry, flow cell, and instrument are functioning properly during initial setup or troubleshooting. It is **not** used for your food samples. | ⚪ Optional (included in the pack) |
 
-## 3.1 Library Preparation 
+### Library Preparation 
 
 Convert purified genomic DNA into a sequencing-ready library by attaching Oxford Nanopore sequencing adapters to DNA fragments, enabling their recognition and translocation through nanopores during sequencing.
 
@@ -71,6 +71,28 @@ Without these adapters, DNA cannot be sequenced.
 - Reagent: Included in the Ligation Sequencing Kit V14.
 - Output Sequencing-ready DNA library.
 
+#### Step 3. Magnetic Bead Cleanup
+
+Purify the library by removing excess enzymes, free adapters, salts, and short DNA fragments. This step improves sequencing efficiency and data quality.
+
+- Reagent:  AMPure XP beads (or equivalent magnetic beads).
+- Output: Clean, high-quality sequencing library.
+  
+#### Step 4. Native Barcoding (Optional)
+
+If sequencing multiple samples simultaneously, unique barcode sequences are ligated to each sample before adapter ligation (or according to the kit workflow).
+| Sample             | Barcode |
+| ------------------ | ------- |
+| Chicken breast     | BC01    |
+| Spinach            | BC02    |
+| Milk               | BC03    |
+| Environmental swab | BC04    |
+
+After sequencing, reads are separated computationally based on these barcodes.
+
+- Kit: Native Barcoding Kit 24 (SQK-NBD114.24)
+
+**This library is then loaded onto an R10.4.1 flow cell for sequencing on the MinION Mk1D.**
 ## 4. Bioinformatics Pipeline: 
 
 We here propose to adapt the published IDseq (CZ ID) metagenomic pathogen detection workflow for Oxford Nanopore long-read sequencing. While the original IDseq platform was primarily developed for Illumina-based metagenomic datasets, our pipeline will incorporate Oxford Nanopore-specific preprocessing (Dorado basecalling, NanoFilt quality filtering, and long-read genome assembly) while retaining the robust taxonomic classification and pathogen identification framework established by IDseq. Additional modules for antimicrobial resistance gene detection, virulence profiling, and automated reporting will be integrated to support routine food safety surveillance.
