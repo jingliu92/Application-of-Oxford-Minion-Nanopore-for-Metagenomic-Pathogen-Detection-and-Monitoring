@@ -93,8 +93,48 @@ After sequencing, reads are separated computationally based on these barcodes.
 - Kit: Native Barcoding Kit 24 (SQK-NBD114.24)
 
 **This library is then loaded onto an R10.4.1 flow cell for sequencing on the MinION Mk1D.**
-## 4. Bioinformatics Pipeline: 
+## 4. Bioinformatics Workflow: 
+Here we developed an IDseq-inspired bioinformatics workflow optimized for Oxford Nanopore shotgun metagenomic sequencing for food safety surveillance.
 
-We here propose to adapt the published IDseq (CZ ID) metagenomic pathogen detection workflow for Oxford Nanopore long-read sequencing. While the original IDseq platform was primarily developed for Illumina-based metagenomic datasets, our pipeline will incorporate Oxford Nanopore-specific preprocessing (Dorado basecalling, NanoFilt quality filtering, and long-read genome assembly) while retaining the robust taxonomic classification and pathogen identification framework established by IDseq. Additional modules for antimicrobial resistance gene detection, virulence profiling, and automated reporting will be integrated to support routine food safety surveillance.
+### Module 1. Basecalling
+**Input** POD5 (raw electrical signals)
 
+**Processing**
+- Convert electrical current signals into nucleotide sequences.
+- Generate per-read quality scores.
+- Demultiplex samples if barcodes are used.
+  
+**Software**: Dorado
 
+**Output**: FASTQ files
+
+### Module 2. Read Quality Control
+
+Remove low-quality and short sequencing reads before downstream analysis.
+
+Typical filtering:
+
+- Mean Q-score ≥ 10–12
+- Minimum read length ≥ 500–1000 bp
+
+**Software**: NanoFilt; NanoPlot (QC visualization)
+
+**Output**: High-quality FASTQ files
+
+### Module 3. Host DNA Removal
+
+Food samples often contain large amounts of host DNA.
+
+| Sample       | Host Genome                |
+| ------------ | -------------------------- |
+| Chicken meat | *Gallus gallus*            |
+| Beef         | *Bos taurus*               |
+| Pork         | *Sus scrofa*               |
+| Seafood      | Species-specific reference |
+| Vegetables   | Plant reference genome     |
+
+Reads mapping to the host genome are removed to enrich microbial sequences.
+
+**Software**: Minimap2
+
+**Output**: Host-depleted FASTQ files
