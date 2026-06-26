@@ -170,6 +170,7 @@ This combination provides both speed and accuracy for Nanopore data.
 Assemble microbial reads into contiguous genome sequences.
 
 **Software**: Flye
+
 **Output**: Contigs; Draft genomes
 
 ### Module 6. Consensus Polishing
@@ -177,19 +178,17 @@ Assemble microbial reads into contiguous genome sequences.
 Correct sequencing errors in assembled genomes.
 
 **Software**:  Medaka
+
 **Output**:  High-quality consensus genomes
 
 ### Module 7. Genome Annotation
 
 Identify genes and annotate genomic features.
 
-Software
+**Software**: Prokka
 
-Prokka
-
-Annotations include:
-
-CDS
-tRNA
-rRNA
-Functional proteins
+**Annotations include**:
+- CDS
+- tRNA
+- rRNA
+- Functional proteins
