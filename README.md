@@ -165,3 +165,9 @@ We use a two-step strategy:
 
 This combination provides both speed and accuracy for Nanopore data.
 
+### Module 5. Genome Assembly
+
+Assemble microbial reads into contiguous genome sequences.
+
+**Software**: Flye
+**Output**: Contigs; Draft genomes
