@@ -33,7 +33,7 @@ Specific objectives include:
 
 <img width="1536" height="1024" alt="image" src="https://github.com/user-attachments/assets/ac8e92b2-292d-411a-8e42-16bd38cece76" />
 
-## 3. Oxford ONT MinION 
+## 3. Oxford ONT MinION and required kits
 ### Device and Kits
 
 | Item                                                            | Purpose                                                                                                                                                                                                                                        |      Needed for Your Project?     |
@@ -45,7 +45,12 @@ Specific objectives include:
 | **Flow Cell Wash Kit**                                          | Cleans residual DNA from a used flow cell so it can potentially be reused for another run if sufficient nanopores remain active. This helps reduce consumable costs.                                                                           |              ✅ Useful             |
 | **Control Expansion Kit**                                       | Contains a control DNA sample (typically lambda phage DNA) used to verify that the sequencing chemistry, flow cell, and instrument are functioning properly during initial setup or troubleshooting. It is **not** used for your food samples. | ⚪ Optional (included in the pack) |
 
+## 3.1 Library Preparation 
 
+Convert purified genomic DNA into a sequencing-ready library by attaching Oxford Nanopore sequencing adapters to DNA fragments, enabling their recognition and translocation through nanopores during sequencing.
+
+Workflow
+<img width="1536" height="1024" alt="image" src="https://github.com/user-attachments/assets/26b8f745-9119-4904-9928-813577599385" />
 
 
 
