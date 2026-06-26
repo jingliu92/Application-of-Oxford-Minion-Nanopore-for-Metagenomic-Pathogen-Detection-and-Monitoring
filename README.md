@@ -171,3 +171,25 @@ Assemble microbial reads into contiguous genome sequences.
 
 **Software**: Flye
 **Output**: Contigs; Draft genomes
+
+### Module 6. Consensus Polishing
+
+Correct sequencing errors in assembled genomes.
+
+**Software**:  Medaka
+**Output**:  High-quality consensus genomes
+
+### Module 7. Genome Annotation
+
+Identify genes and annotate genomic features.
+
+Software
+
+Prokka
+
+Annotations include:
+
+CDS
+tRNA
+rRNA
+Functional proteins
