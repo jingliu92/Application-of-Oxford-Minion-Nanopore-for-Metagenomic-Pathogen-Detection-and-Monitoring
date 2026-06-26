@@ -1,4 +1,4 @@
-# Application-of-Oxford-Minion-Nanopore-for-Metagenomic-pathogen-detection-and-Monitoring
+# FoodNanoDetect: An Oxford Nanopore-Based Shotgun Metagenomic Pipeline for Rapid Foodborne Pathogen Detection and Surveillance
 
 ## 1. Background
 
