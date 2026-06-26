@@ -49,7 +49,6 @@ Specific objectives include:
 
 Convert purified genomic DNA into a sequencing-ready library by attaching Oxford Nanopore sequencing adapters to DNA fragments, enabling their recognition and translocation through nanopores during sequencing.
 
-Workflow
 <img width="1536" height="1024" alt="image" src="https://github.com/user-attachments/assets/26b8f745-9119-4904-9928-813577599385" />
 
 
