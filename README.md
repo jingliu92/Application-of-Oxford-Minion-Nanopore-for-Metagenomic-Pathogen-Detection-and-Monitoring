@@ -32,3 +32,7 @@ Specific objectives include:
 - Validate the pipeline using known foodborne pathogens and naturally contaminated food samples from NCBI.
 
 <img width="1536" height="1024" alt="image" src="https://github.com/user-attachments/assets/ac8e92b2-292d-411a-8e42-16bd38cece76" />
+
+## 3. Bioinformatics Pipeline: 
+
+We here propose to adapt the published IDseq (CZ ID) metagenomic pathogen detection workflow for Oxford Nanopore long-read sequencing. While the original IDseq platform was primarily developed for Illumina-based metagenomic datasets, our pipeline will incorporate Oxford Nanopore-specific preprocessing (Dorado basecalling, NanoFilt quality filtering, and long-read genome assembly) while retaining the robust taxonomic classification and pathogen identification framework established by IDseq. Additional modules for antimicrobial resistance gene detection, virulence profiling, and automated reporting will be integrated to support routine food safety surveillance.
