@@ -192,3 +192,24 @@ Identify genes and annotate genomic features.
 - tRNA
 - rRNA
 - Functional proteins
+
+### Module 8. Antimicrobial Resistance Detection
+
+Identify antimicrobial resistance genes.
+
+**Database**: CARD; ResFinder
+
+**Output**
+- Resistance genes
+- Resistance mechanisms
+
+### Module 9. Virulence Factor Detection
+
+Identify genes associated with pathogenicity.
+
+**Database**: VFDB
+**Output**
+- Adhesins
+- Toxins
+- Secretion systems
+- Other virulence-associated genes
