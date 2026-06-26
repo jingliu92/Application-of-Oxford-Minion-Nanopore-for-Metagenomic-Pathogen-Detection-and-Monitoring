@@ -108,6 +108,7 @@ Here we developed an IDseq-inspired bioinformatics workflow optimized for Oxford
 
 **Output**: FASTQ files
 
+
 ### Module 2. Read Quality Control
 
 Remove low-quality and short sequencing reads before downstream analysis.
@@ -120,6 +121,7 @@ Typical filtering:
 **Software**: NanoFilt; NanoPlot (QC visualization)
 
 **Output**: High-quality FASTQ files
+
 
 ### Module 3. Host DNA Removal
 
@@ -138,3 +140,36 @@ Reads mapping to the host genome are removed to enrich microbial sequences.
 **Software**: Minimap2
 
 **Output**: Host-depleted FASTQ files
+
+
+### Module 4. Taxonomic Classification
+
+We use a two-step strategy:
+
+**Primary Classification**
+
+Rapid identification of microorganisms.
+
+Software: Kraken2
+
+Output
+- Species
+- Genus
+- Relative abundance
+
+↓
+
+Secondary Validation
+
+Long-read-aware taxonomic confirmation.
+
+Software
+
+MetaMaps
+
+Output
+
+Species confirmation
+Improved strain-level resolution
+
+This combination provides both speed and accuracy for Nanopore data.
