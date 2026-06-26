@@ -213,3 +213,16 @@ Identify genes associated with pathogenicity.
 - Toxins
 - Secretion systems
 - Other virulence-associated genes
+
+### Module 10. Report Generation
+
+Automatically generate a comprehensive report including:
+
+- Sequencing statistics
+- Taxonomic composition
+- Relative abundance profiles
+- Genome assembly metrics
+- Antimicrobial resistance genes
+- Virulence factors
+- Interactive visualizations (e.g., Krona plots)
+- PDF/HTML summary for food safety interpretation
