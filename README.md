@@ -49,9 +49,27 @@ Specific objectives include:
 
 Convert purified genomic DNA into a sequencing-ready library by attaching Oxford Nanopore sequencing adapters to DNA fragments, enabling their recognition and translocation through nanopores during sequencing.
 
+
 <img width="1536" height="1024" alt="image" src="https://github.com/user-attachments/assets/26b8f745-9119-4904-9928-813577599385" />
 
+#### Step 1. DNA End Repair & dA-Tailing
 
+   DNA extracted from samples often has uneven or damaged ends. This step repairs those ends and adds a single adenine (A) overhang to each DNA fragment, creating compatible ends for adapter ligation.
+
+- Reagent: Included in the Ligation Sequencing Kit V14.
+
+- Output: Uniform DNA molecules ready for adapter attachment.
+#### Step 2. Adapter Ligation
+  
+  Oxford Nanopore sequencing adapters are ligated onto both ends of each DNA fragment.
+
+These adapters contain:
+- Motor proteins that regulate DNA translocation through the nanopore.
+- Sequencing adapters recognized by the MinION instrument.
+
+Without these adapters, DNA cannot be sequenced.
+- Reagent: Included in the Ligation Sequencing Kit V14.
+- Output Sequencing-ready DNA library.
 
 ## 4. Bioinformatics Pipeline: 
 
