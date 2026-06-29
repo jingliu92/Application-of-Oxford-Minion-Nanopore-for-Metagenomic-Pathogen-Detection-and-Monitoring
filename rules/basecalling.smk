@@ -1,16 +1,28 @@
-#################################################
-# Basecalling Rule
-#################################################
-
 rule basecalling:
     input:
-        "raw/{sample}.pod5"
+        pod5="raw/{sample}.pod5"
 
     output:
-        "results/basecalling/{sample}.fastq.gz"
+        fastq="results/basecalling/{sample}.fastq.gz"
+
+    log:
+        "logs/basecalling/{sample}.log"
+
+    threads:
+        config["threads"]
+
+    params:
+        executable=config["dorado"]["executable"],
+        model=config["dorado"]["model"],
+        device=config["dorado"]["device"]
 
     shell:
-        """
-        mkdir -p results/basecalling
-        touch {output}
+        r"""
+        mkdir -p results/basecalling logs/basecalling
+
+        {params.executable} basecaller \
+            --device {params.device} \
+            {params.model} \
+            {input.pod5} \
+        2> {log} | gzip > {output.fastq}
         """
