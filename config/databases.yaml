@@ -1,0 +1,13 @@
+kraken:
+  database: database/kraken
+
+card:
+  database: database/card
+
+vfdb:
+  database: database/vfdb
+
+host:
+  chicken: database/host/Gallus_gallus.fa
+  cow: database/host/Bos_taurus.fa
+  pig: database/host/Sus_scrofa.fa

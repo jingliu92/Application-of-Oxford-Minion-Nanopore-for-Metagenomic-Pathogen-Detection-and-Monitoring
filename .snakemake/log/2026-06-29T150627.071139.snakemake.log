@@ -1,0 +1,55 @@
+Assuming unrestricted shared filesystem usage.
+
+SNAKEMAKE
+=========
+  Date: 2026-06-29 15:06:27
+  Workflow ID: c0ab587e-bbd9-452e-93f1-41e2bc1b324f
+  Platform: Linux-6.11.0-21-generic-x86_64-with-glibc2.39
+  Host: iehrnd-Super-Server
+  User: jing
+  Snakemake version: 9.23.1
+  Python version: 3.11.15 | packaged by conda-forge | (main, Jun 11 2026, 03:34:02) [GCC 14.3.0]
+  Command: /home/jing/miniconda3/envs/foodnano/bin/snakemake --cores 1
+  Snakefile: /home/jing/miniONT/FoodNanoDetect/Snakefile
+  Base directory: /home/jing/miniONT/FoodNanoDetect
+  Run directory: /home/jing/miniONT/FoodNanoDetect
+  Working directory: /home/jing/miniONT/FoodNanoDetect
+  Config file(s): ['config/config.yaml']
+  Config MD5: d6ef62cfbf2cb246cc126b8d30402bee
+
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 1 (use --cores to define parallelism)
+Rules claiming more threads will be scaled down.
+Job stats:
+job            count
+-----------  -------
+basecalling        1
+all                1
+total              2
+
+Select jobs to execute...
+Execute 1 jobs...
+[Mon Jun 29 15:06:27 2026]
+localrule basecalling:
+    input: raw/sample01.pod5
+    output: results/basecalling/sample01.fastq.gz
+    jobid: 1
+    reason: Missing output files: results/basecalling/sample01.fastq.gz
+    wildcards: sample=sample01
+    resources: tmpdir=/tmp
+[Mon Jun 29 15:06:27 2026]
+Finished jobid: 1 (Rule: basecalling)
+1 of 2 steps (50%) done
+Select jobs to execute...
+Execute 1 jobs...
+[Mon Jun 29 15:06:27 2026]
+localrule all:
+    input: results/basecalling/sample01.fastq.gz
+    jobid: 0
+    reason: Input files updated by another job: results/basecalling/sample01.fastq.gz
+    resources: tmpdir=/tmp
+[Mon Jun 29 15:06:27 2026]
+Finished jobid: 0 (Rule: all)
+2 of 2 steps (100%) done
+Complete log(s): /home/jing/miniONT/FoodNanoDetect/.snakemake/log/2026-06-29T150627.071139.snakemake.log
